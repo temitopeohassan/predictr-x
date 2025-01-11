@@ -54,7 +54,7 @@ export function MarketDetails({ market }: MarketDetailsProps) {
         <AlertTitle>Resolution Details</AlertTitle>
         <AlertDescription>
           This market will be resolved based on official price data from major cryptocurrency exchanges.
-          The resolution source will be CoinGecko's Bitcoin/USD price feed.
+          The resolution source will be CoinGecko Bitcoin/USD price feed.
         </AlertDescription>
       </Alert>
     </div>
