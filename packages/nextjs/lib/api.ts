@@ -1,5 +1,7 @@
+import { Market } from "~~/types";
+
 // Simulated API calls - replace with real API endpoints
-export async function getFeaturedMarkets() {
+export async function getFeaturedMarkets(): Promise<Market[]> {
   return [
     {
       id: "featured-1",
@@ -9,7 +11,7 @@ export async function getFeaturedMarkets() {
       totalLiquidity: 100000,
       volume: 250000,
       category: "Space",
-      status: "open",
+      status: "open" as const,
       outcomes: [
         { id: "1", title: "Yes", probability: 0.75, price: 0.75 },
         { id: "2", title: "No", probability: 0.25, price: 0.25 },
@@ -18,7 +20,7 @@ export async function getFeaturedMarkets() {
   ];
 }
 
-export async function getMarkets() {
+export async function getMarkets(): Promise<Market[]> {
   return [
     {
       id: "1",
@@ -28,7 +30,7 @@ export async function getMarkets() {
       totalLiquidity: 50000,
       volume: 75000,
       category: "Crypto",
-      status: "open",
+      status: "open" as const,
       outcomes: [
         { id: "1", title: "Yes", probability: 0.65, price: 0.65 },
         { id: "2", title: "No", probability: 0.35, price: 0.35 },
@@ -37,7 +39,7 @@ export async function getMarkets() {
   ];
 }
 
-export async function getMarketById(id: string) {
+export async function getMarketById(id: string): Promise<Market> {
   return {
     id: "1",
     title: "Will Bitcoin reach $100k by end of 2024?",
@@ -46,7 +48,7 @@ export async function getMarketById(id: string) {
     totalLiquidity: 50000,
     volume: 75000,
     category: "Crypto",
-    status: "open",
+    status: "open" as const,
     outcomes: [
       { id: "1", title: "Yes", probability: 0.65, price: 0.65 },
       { id: "2", title: "No", probability: 0.35, price: 0.35 },
